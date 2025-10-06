@@ -4,7 +4,7 @@ int Stack[MAX];
 int top=-1;
 void push(int item){
     if(top== MAX-1){
-        printf("overflow\n",item);
+        printf("overflow\n");
     }
     else{
          top++ ;
@@ -61,20 +61,21 @@ int main(){
         printf(" Enter your choice: \n");
         scanf("%d",& choice);
         switch(choice){
-            case1:
+            case 1:
             printf("Enter element to push:");
             scanf("%d",&item);
+            push(item);
             break;
-            case2:
+            case 2:
             pop();
             break;
-            case3:
+            case 3:
             peek();
             break;
-            case4:
+            case 4:
             display();
             break;
-            case5:
+            case 5:
             return 0;
             default:
             printf("Invalid choice!\n");
@@ -86,4 +87,5 @@ int main(){
 
 
     }
+
 }
